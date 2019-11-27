@@ -94,6 +94,7 @@ module bsg_mem_3r1w_sync #( parameter width_p = -1
 
   //synopsys translate_off
   always_ff @(negedge clk_i)
+  always_ff @(posedge clk_i)
     if (w_v_i)
     begin
       assert (w_addr_i < els_p)
